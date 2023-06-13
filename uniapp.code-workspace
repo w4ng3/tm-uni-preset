@@ -1,0 +1,16 @@
+{
+  "folders": [
+    {
+      "path": "../../Desktop/tm-demo"
+    }
+  ],
+  "settings": {
+    "minapp-vscode.decorateComplexInterpolation": false,
+    "files.associations": {
+      "*.nvue": "vue"
+    },
+    "editor.formatOnSave": true,
+    "create-uniapp-view.style": "scss",
+    "create-uniapp-view.template": "vue3"
+  }
+}
