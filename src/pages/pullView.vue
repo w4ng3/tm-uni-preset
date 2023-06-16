@@ -3,12 +3,7 @@
     <tm-sheet>
       <tm-divider></tm-divider>
       <view class="flex flex-col flex-col-top-center">
-        <tm-virtual-list
-          :load="getdata"
-          :width="626"
-          :height="1000"
-          :data="imglist"
-          :itemHeight="160">
+        <tm-virtual-list :load="getdata" :width="626" :height="1000" :data="imglist" :itemHeight="160">
           <template v-slot:default="{ data }">
             <tm-sheet
               :border="1"
@@ -21,10 +16,7 @@
               v-for="(item, index) in data"
               :key="index">
               <view class="flex flex-row flex-row-center-between flex-1">
-                <tm-image
-                  :width="200"
-                  :height="100"
-                  :src="item.src"></tm-image>
+                <tm-image :width="200" :height="100" :src="item.src"></tm-image>
                 <tm-text :label="'image-Row-' + item.index"></tm-text>
               </view>
             </tm-sheet>
@@ -45,13 +37,19 @@ const getdata = (e: string) => {
         console.log('top---->下拉加载')
         imglist.value = []
         for (let i = 0; i < 10; i++) {
-          imglist.value.push({ src: 'https://i0.pickpik.com/photos/298/434/513/beach-dawn-dusk-ocean-thumb.jpg', index: i })
+          imglist.value.push({
+            src: 'https://i0.pickpik.com/photos/298/434/513/beach-dawn-dusk-ocean-thumb.jpg',
+            index: i,
+          })
         }
       } else if (e == 'bottom') {
         console.log('bottom---->触底加载')
         let len = imglist.value.length
         for (let i = len; i < 10 + len; i++) {
-          imglist.value.push({ src: 'https://i0.pickpik.com/photos/298/434/513/beach-dawn-dusk-ocean-thumb.jpg', index: i })
+          imglist.value.push({
+            src: 'https://i0.pickpik.com/photos/298/434/513/beach-dawn-dusk-ocean-thumb.jpg',
+            index: i,
+          })
         }
       }
       res(true)

@@ -5,11 +5,44 @@
       "^tm-(.*)": "@/tmui/components/tm-$1/tm-$1.vue"
     }
   },
+  "tabBar": {
+    "color": "#7A7E83",
+    "selectedColor": "#3cc51f",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/about",
+        "iconPath": "static/logo.png",
+        "selectedIconPath": "static/logo.png",
+        "text": "about"
+      },
+      {
+        "pagePath": "pages/pullView",
+        "iconPath": "static/logo.png",
+        "selectedIconPath": "static/logo.png",
+        "text": "pullView"
+      },
+      {
+        "pagePath": "pages/personal/my",
+        "iconPath": "static/logo.png",
+        "selectedIconPath": "static/logo.png",
+        "text": "personal"
+      }
+    ]
+  },
   "pages": [
     {
       "path": "pages/about",
       "style": {
         "navigationBarTitleText": "about"
+      }
+    },
+    {
+      "path": "pages/pullView",
+      "style": {
+        "navigationBarTitleText": "pullView",
+        "enablePullDownRefresh": true
       }
     },
     {
@@ -22,10 +55,15 @@
       }
     },
     {
-      "path": "pages/pullView",
+      "path": "pages/personal/my",
       "style": {
-        "navigationBarTitleText": "pullView",
-        "enablePullDownRefresh": true
+        "navigationBarTitleText": "my"
+      }
+    },
+    {
+      "path": "pages/personal/custom-tabbar",
+      "style": {
+        "navigationBarTitleText": "custom-tabbar"
       }
     }
   ],

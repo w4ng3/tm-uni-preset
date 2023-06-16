@@ -1,6 +1,6 @@
 module.exports = {
-  // 一行最多 130 字符
-  printWidth: 130,
+  // 一行最多 110 字符
+  printWidth: 110,
   // 使用 2 个空格缩进
   tabWidth: 2,
   // 不使用缩进符，而使用空格
@@ -35,7 +35,7 @@ module.exports = {
   // 换行符使用 lf
   endOfLine: 'lf',
   // 每行强制使用单个属性
-  singleAttributePerLine: true,
+  singleAttributePerLine: false,
   // 在对象，数组括号与文字之间加空格 "{ foo: bar }"
   bracketSpacing: true,
   // 尾标签 > 是否另起一行

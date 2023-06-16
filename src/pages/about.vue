@@ -1,12 +1,8 @@
 <template>
   <tm-app>
     <tm-sheet>
-      <tm-text
-        :font-size="24"
-        _class="font-weight-b"
-        label="卡片可以完全通过插槽自定义"></tm-text>
+      <tm-text :font-size="24" _class="font-weight-b" label="卡片可以完全通过插槽自定义" @click="nav" />
     </tm-sheet>
-
     <tm-card
       :border="1"
       statusColor="red"
@@ -14,9 +10,7 @@
       title="看到边线卡片标题了吗？"
       content="这是一个基础卡片示例，非常简单且实用。这是一个基础卡片示例，非常简单且实用。"></tm-card>
 
-    <view
-      v-for="(item, index) in arr"
-      :key="index">
+    <view v-for="(item, index) in arr" :key="index">
       <tm-card
         status="2022-5-2"
         :title="item.name"
@@ -48,6 +42,10 @@
 <script lang="ts">
 import { ref } from 'vue'
 import { onShow, onLoad } from '@dcloudio/uni-app'
+import TmActionMenu from '@/tmui/components/tm-action-menu/tm-action-menu.vue'
+import { unix } from '@/tmui/tool/dayjs'
+import { url } from 'inspector'
+import WxCanvas from '@/tmui/components/tm-chart/canvasinit'
 </script>
 <script lang="ts" setup>
 const arr = ref([{ name: '王二' }, { name: '王三' }, { name: '王亖' }, { name: '王五' }])
@@ -55,6 +53,11 @@ const arr = ref([{ name: '王二' }, { name: '王三' }, { name: '王亖' }, { n
 onLoad(() => {
   // console.log('arr', arr.value)s
 })
+
+const nav = () => {
+  console.log('naive')
+  uni.navigateTo({ url: './index/index' })
+}
 </script>
 
 <style lang="scss" scoped></style>
