@@ -35,7 +35,8 @@
     {
       "path": "pages/about",
       "style": {
-        "navigationBarTitleText": "about"
+        "navigationBarTitleText": "about",
+        "enablePullDownRefresh": true
       }
     },
     {

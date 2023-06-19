@@ -1,7 +1,7 @@
 <template>
   <tm-app>
     <tm-sheet>
-      <tm-text :font-size="24" _class="font-weight-b" label="卡片可以完全通过插槽自定义" @click="nav" />
+      <tm-text :font-size="24" _class="font-weight-b" label="卡片可以完全通过插槽自定义" />
     </tm-sheet>
     <tm-card
       :border="1"
@@ -10,11 +10,11 @@
       title="看到边线卡片标题了吗？"
       content="这是一个基础卡片示例，非常简单且实用。这是一个基础卡片示例，非常简单且实用。"></tm-card>
 
-    <view v-for="(item, index) in arr" :key="index">
+    <view v-for="(item, index) in listRef" :key="index">
       <tm-card
         status="2022-5-2"
         :title="item.name"
-        content="这是一个基础卡片示例，非常简单且实用。这是一个基础卡片示例，非常简单且实用。">
+        :content="item.id + '这是一个基础卡片示例，非常简单且实用。'">
         <template v-slot:action>
           <view class="flex flex-row flex-row-center-end flex-1">
             <tm-button
@@ -41,23 +41,18 @@
 
 <script lang="ts">
 import { ref } from 'vue'
-import { onShow, onLoad } from '@dcloudio/uni-app'
-import TmActionMenu from '@/tmui/components/tm-action-menu/tm-action-menu.vue'
-import { unix } from '@/tmui/tool/dayjs'
-import { url } from 'inspector'
-import WxCanvas from '@/tmui/components/tm-chart/canvasinit'
+import { onLoad } from '@dcloudio/uni-app'
+import usePull2Refresh from '@/hooks/usePull2Refresh'
 </script>
 <script lang="ts" setup>
-const arr = ref([{ name: '王二' }, { name: '王三' }, { name: '王亖' }, { name: '王五' }])
-
+const listRef = ref<Userinfo[]>([])
+const { onLoadList, onPullDownRefresh, onReachBottom } = usePull2Refresh(
+  listRef,
+  'http://127.0.0.1:4523/mock/946406/api/todayOnhistory?date=4/11',
+)
 onLoad(() => {
-  // console.log('arr', arr.value)s
+  onLoadList()
 })
-
-const nav = () => {
-  console.log('naive')
-  uni.navigateTo({ url: './index/index' })
-}
 </script>
 
 <style lang="scss" scoped></style>

@@ -18,7 +18,7 @@
             label="加载失败,点我重试"></tm-text>
         </view>
       </tm-sheet>
-      <view class="flex flex-col relative" :style="[{ height: totalHeight + 'px' }]">
+      <view class="flex flex-col relative" :style="{ height: totalHeight + 'px' }">
         <view class="absolute l-0 t-0 flex flex-col"
           :style="{ height: `${props.topHeight}rpx`, width: `${props.width}rpx` }">
           <slot name="top"></slot>
