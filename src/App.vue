@@ -18,21 +18,47 @@ onLaunch(() => {
       provider: 'weixin',
       success: (wxInfo) => {
         console.log('wxInfo', wxInfo)
-        // 获取到code后，提交给服务端
-        api
-          .post('/wxa/login', {
-            code: wxInfo.code,
-          })
-          .then((res: any) => {
-            // 存储获取到的token
-            uni.setStorage({
-              key: 'tokenInfo',
-              data: {
+
+        uni.getUserInfo({
+          provider: 'weixin',
+          success: function (infoRes) {
+            console.log('infoRes', infoRes)
+
+            let data = {
+              code: wxInfo.code,
+              encryptedData: infoRes.encryptedData,
+              iv: infoRes.iv,
+            }
+
+            return
+
+            // 提交给服务端
+            api.post('/wxa/login', data).then((res: any) => {
+              // 存储获取到的token
+              uni.setStorageSync('tokenInfo', {
                 token: res.token,
                 timestamp: new Date().valueOf(),
-              },
+              })
+
+              // wx.hideLoading()
+              // wx.setStorageSync('userId', res.data.userId)
+              // if (res.data.phone == '') {
+              //   wx.navigateTo({
+              //     url: '/pages/user/bind/bind?userId=' + res.data.userId,
+              //   })
+              // } else {
+              //   http.post('user/getUserInfo', {}, 'json').then((res1) => {
+              //     if (res1.code == 0) {
+              //       wx.setStorageSync('userInfo', res1.data)
+              //       wx.switchTab({
+              //         url: '/pages/index/index',
+              //       })
+              //     }
+              //   })
+              // }
             })
-          })
+          },
+        })
       },
     })
   }

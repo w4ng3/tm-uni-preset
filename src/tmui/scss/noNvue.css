@@ -1,17 +1,21 @@
 @charset "UTF-8";
 /* #ifndef APP-PLUS-NVUE */
 @import '../tool/tmicon/tmicon.min.css';
-.tableHeader .uni-scroll-view::-webkit-scrollbar, .tableHeader .uni-scroll-view::-webkit-scrollbar {
+.tableHeader .uni-scroll-view::-webkit-scrollbar,
+.tableHeader .uni-scroll-view::-webkit-scrollbar {
   display: none; /*隐藏滚动条*/
 }
 
 /* #ifndef APP-PLUS-NVUE */
-page, body {
+page,
+body {
   display: flex;
   flex-direction: column;
 }
 
-page, body, tm-app {
+page,
+body,
+tm-app {
   min-height: 100%;
   flex: 1;
   display: flex;
@@ -46,7 +50,7 @@ page, body, tm-app {
 
 .blur {
   -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
   background-color: rgba(0, 0, 0, 0.3);
 }
 
@@ -10984,4 +10988,4 @@ page, body, tm-app {
 
 .darken-6 {
   background-color: #0a0a0a;
-}/*# sourceMappingURL=noNvue.css.map */
+} /*# sourceMappingURL=noNvue.css.map */

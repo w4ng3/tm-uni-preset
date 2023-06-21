@@ -1,7 +1,9 @@
 <template>
   <tm-app>
     <tm-sheet>
-      <tm-text :font-size="24" _class="font-weight-b" label="卡片可以完全通过插槽自定义" />
+      <tm-text :font-size="24" _class="font-weight-b" label="卡片可通过插槽自定义" />
+      <tm-image :src="userinfo.avatar"></tm-image>
+      <text>{{ userinfo.nickname }}</text>
     </tm-sheet>
     <tm-card
       :border="1"
@@ -41,10 +43,14 @@
 
 <script lang="ts">
 import { ref } from 'vue'
-import { onLoad } from '@dcloudio/uni-app'
+import { onLoad, onShow } from '@dcloudio/uni-app'
 import usePull2Refresh from '@/hooks/usePull2Refresh'
+import { useUserStore } from '@/store/user-store'
+import { storeToRefs } from 'pinia'
 </script>
 <script lang="ts" setup>
+const userStore = useUserStore()
+const { userinfo } = storeToRefs(userStore)
 const listRef = ref<Userinfo[]>([])
 const { onLoadList, onPullDownRefresh, onReachBottom } = usePull2Refresh(
   listRef,
@@ -52,7 +58,10 @@ const { onLoadList, onPullDownRefresh, onReachBottom } = usePull2Refresh(
 )
 onLoad(() => {
   onLoadList()
-  uni.login
+})
+
+onShow(() => {
+  console.log('Q', userinfo.value.avatar)
 })
 </script>
 
