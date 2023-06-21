@@ -44,7 +44,7 @@
         text="图表中心"
         unicon="tmicon-account"
         icon="tmicon-userplus-fill"
-        iconSize="48"></tm-tabbar-item>
+        :iconSize="48"></tm-tabbar-item>
     </tm-tabbar>
   </tm-app>
 </template>

@@ -10,7 +10,7 @@
       title="看到边线卡片标题了吗？"
       content="这是一个基础卡片示例，非常简单且实用。这是一个基础卡片示例，非常简单且实用。"></tm-card>
 
-    <view v-for="(item, index) in listRef" :key="index">
+    <block v-for="(item, index) in listRef" :key="index">
       <tm-card
         status="2022-5-2"
         :title="item.name"
@@ -35,7 +35,7 @@
           </view>
         </template>
       </tm-card>
-    </view>
+    </block>
   </tm-app>
 </template>
 
@@ -52,6 +52,7 @@ const { onLoadList, onPullDownRefresh, onReachBottom } = usePull2Refresh(
 )
 onLoad(() => {
   onLoadList()
+  uni.login
 })
 </script>
 

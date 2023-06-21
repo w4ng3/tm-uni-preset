@@ -5,12 +5,27 @@
     }
   ],
   "settings": {
-    "minapp-vscode.decorateComplexInterpolation": false,
     "files.associations": {
       "*.nvue": "vue"
     },
     "editor.formatOnSave": true,
     "create-uniapp-view.style": "scss",
-    "create-uniapp-view.template": "vue3"
+    "create-uniapp-view.template": "vue3",
+    "uniapp-vscode.globalStyleFiles": ["./src/uni.scss", "./src/tmui/scss/noNvue.css"],
+    "uniapp-vscode.jsAutoApi": false,
+    "uniapp-vscode.jsAutoCompletion": false,
+    "uniapp-vscode.jsHover": false,
+    "uniapp-vscode.snippets": {
+      "wxml": {
+        "open-data": {
+          "body": "<open-data type=\"${1|groupName,userNickName,userAvatarUrl,userGender,userCity,userProvince,userCountry,userLanguage|}\" lang=\"${2|en,zh_CN,zh_TW|}\" />$0"
+        }
+      },
+      "pug": {
+        "open-data": {
+          "body": "open-data(type=\"${1|groupName,userNickName,userAvatarUrl,userGender,userCity,userProvince,userCountry,userLanguage|}\" lang=\"${2|en,zh_CN,zh_TW|}\")$0"
+        }
+      }
+    }
   }
 }
