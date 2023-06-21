@@ -34,7 +34,7 @@ function onChooseAvatar(e: any) {
   // })
   // 获取到微信头像临时地址
   const { avatarUrl } = e.detail
-  userStore.updateAvatar(avatarUrl)
+  userStore.setUserInfo('avatar', avatarUrl)
   // 上传文件到服务器
   // request.get('/qiniu-token').then((tokenInfo:any) => {
   //   uploadToQiniu(tokenInfo, avatarUrl).then((uploadedAvatar) => {
