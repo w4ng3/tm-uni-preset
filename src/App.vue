@@ -70,11 +70,13 @@ onHide(() => {
   console.log('App Hide')
 })
 </script>
-<style>
+<style lang="scss">
 /* #ifdef APP-PLUS-NVUE */
 @import './tmui/scss/nvue.css';
 /* #endif */
 /* #ifndef APP-PLUS-NVUE */
 @import './tmui/scss/noNvue.css';
 /* #endif */
+
+@import './uni.scss';
 </style>

@@ -2,15 +2,13 @@
   <tm-app>
     <tm-sheet>
       <tm-text :font-size="24" _class="font-weight-b" label="卡片可通过插槽自定义" />
-      <tm-image :src="userinfo.avatar"></tm-image>
-      <text>{{ userinfo.nickname }}</text>
     </tm-sheet>
     <tm-card
       :border="1"
       statusColor="red"
       status="2022-5-2"
       title="看到边线卡片标题了吗？"
-      content="这是一个基础卡片示例，非常简单且实用。这是一个基础卡片示例，非常简单且实用。"></tm-card>
+      content="这是一个基础列表示例，下拉刷新，上拉加载。"></tm-card>
 
     <block v-for="(item, index) in listRef" :key="index">
       <tm-card

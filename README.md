@@ -22,4 +22,8 @@ npm run dev:mp-weixin
 
 ## Tips
 
-- 状态管理使用 [Pinia](Pinia 进阶：再谈 Pinia 函数式（composition API）用法) , 还使用了[pinia-plugin-unistorage](https://www.npmjs.com/package/pinia-plugin-unistorage) 插件可方便的将 Pinia 里的数据本地存储。
+- 状态管理使用 [Pinia](https://juejin.cn/post/7089032094231298084) , 还使用了[pinia-plugin-unistorage](https://www.npmjs.com/package/pinia-plugin-unistorage) 插件可方便的将 Pinia 里的数据本地存储。
+
+- CSS 库 使用 TMUI 内置的原子样式 [Link](https://tmui.design/CSSTool/css.html)，在 VSCode 里要安装 `uniapp小程序扩展` 插件，配置样式文件位置，才能有全局样式的类名提示。
+
+- [JS 工具库](https://tmui.design/JSTool/javascript.html#)

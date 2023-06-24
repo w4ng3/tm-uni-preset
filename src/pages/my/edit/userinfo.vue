@@ -3,29 +3,28 @@
     <div class="flex-box center align-center p-3">
       <button class="avatar-wrapper" :plain="true" open-type="chooseAvatar" @chooseavatar="onChooseAvatar">
         <image class="avatar" :src="userinfo.avatar"></image>
-        <div class="font2">点击图片修改头像</div>
+        <div class="text-size-m">点击图片修改头像</div>
       </button>
     </div>
-    <div class="other-form p-3">
-      <div class="font1">基础信息</div>
-      <button @click="go">nickname</button>
-    </div>
-
-    <button @click="test">PINIA</button>
-
-    <!-- <button open-type="getPhoneNumber" @getphonenumber="getPhoneNumber">获取手机号</button> -->
   </div>
+  <form @submit="handleEditNickname">
+    <tm-sheet :margin="[32, 40, 32, 32]" border="3">
+      <input name="nickname" type="nickname" placeholder="请输入昵称" :value="userinfo.nickname" />
+    </tm-sheet>
+
+    <tm-sheet :margin="[32, 40, 32, 32]">
+      <button class="submit-btn" form-type="submit">保存</button>
+    </tm-sheet>
+  </form>
 </template>
 
 <script lang="ts" setup>
 import { reactive, ref } from 'vue'
 import { storeToRefs } from 'pinia'
-import { useAccountStore } from '../store/account'
 import { useUserStore } from '@/store/user-store'
 // import request from '@/common/request'
-// import { uploadToQiniu } from '@/common/util'
 
-const account = useAccountStore()
+// const account = useAccountStore()
 const userStore = useUserStore()
 const { userinfo } = storeToRefs(userStore)
 function onChooseAvatar(e: any) {
@@ -45,27 +44,16 @@ function onChooseAvatar(e: any) {
   // })
 }
 
-const go = () => {
-  uni.navigateTo({ url: './personal/edit/nickname' })
-}
-
-const getPhoneNumber = (e: any) => {
-  console.log('--', e)
-  //拿到参数后进一步去解密....
-  // 授权通过后轮询等待获取sessionKey响应成功
-  if (['getPhoneNumber:ok'].includes(e?.detail?.errMsg)) {
-    handlePolling(e)
-  }
-}
-
 const handlePolling = (e: any) => {
   console.log('e', e)
 }
-///
 
-const test = () => {}
+function handleEditNickname(e: any) {
+  // 获取到用户昵称，存储到store中
+  userStore.setUserInfo('nickname', e.detail.value.nickname)
+  uni.navigateBack()
+}
 </script>
-
 <style lang="scss" scoped>
 .edit-info {
   width: 100%;
