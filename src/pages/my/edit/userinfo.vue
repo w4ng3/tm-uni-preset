@@ -22,25 +22,42 @@
 import { reactive, ref } from 'vue'
 import { storeToRefs } from 'pinia'
 import { useUserStore } from '@/store/user-store'
-// import request from '@/common/request'
+//@ts-ignore
+import { ossUpload } from '@/utils/uploadUtil/uploadOSS.js'
 
-// const account = useAccountStore()
 const userStore = useUserStore()
 const { userinfo } = storeToRefs(userStore)
 function onChooseAvatar(e: any) {
-  // uni.showLoading({
-  //   title: '上传中',
-  // })
+  uni.showLoading({
+    title: '上传中',
+  })
   // 获取到微信头像临时地址
   const { avatarUrl } = e.detail
-  userStore.setUserInfo('avatar', avatarUrl)
-  // 上传文件到服务器
-  // request.get('/qiniu-token').then((tokenInfo:any) => {
-  //   uploadToQiniu(tokenInfo, avatarUrl).then((uploadedAvatar) => {
-  //     uni.hideLoading()
-  //     // 将头像存储到store中
-  //     user.setUserInfo('avatar', uploadedAvatar)
-  //   })
+  // userStore.setUserInfo('avatar', avatarUrl)
+  // 上传文件到 OSS
+  ossUpload({
+    filePath: avatarUrl,
+    dir: 'SSP/',
+    success: (res: any) => {
+      console.log('newAvatar', res)
+      uni.hideLoading()
+      // 将头像存储到store中
+      userStore.setUserInfo('avatar', res)
+      // 上传完成需要更新 fileList
+      // let userInfo = that.data.userInfo;
+      // userInfo.avatar = res;
+      // that.setData({
+      //   userInfo,
+      // });
+    },
+    fail: (res: any) => {
+      console.log(res)
+    },
+  })
+  // uploadToQiniu(tokenInfo, avatarUrl).then((uploadedAvatar) => {
+  //   uni.hideLoading()
+  //   // 将头像存储到store中
+  //   userStore.setUserInfo('avatar', uploadedAvatar)
   // })
 }
 

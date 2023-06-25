@@ -1,5 +1,4 @@
-// 该处配置为后端接口地址
-const defaultHost = 'http://api-server.com'
+import { baseUrl } from '@/common/constants'
 
 const errorMsg = (response) => {
   let error = {}
@@ -54,7 +53,7 @@ const errorMsg = (response) => {
 
 function request(path, method, data, setting) {
   const tokenInfo = uni.getStorageSync('tokenInfo')
-  const host = setting ? setting.host || defaultHost : defaultHost
+  const host = setting ? setting.host || baseUrl : baseUrl
   const token = setting ? setting.token || tokenInfo.token : tokenInfo.token
   return new Promise((resolve, reject) => {
     uni.request({

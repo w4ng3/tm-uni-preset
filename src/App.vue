@@ -2,7 +2,8 @@
 
 <script lang="ts" setup>
 import { onLaunch, onShow, onHide } from '@dcloudio/uni-app'
-import api from './utils/requset.js'
+import api from './utils/api/requset.js'
+
 onLaunch(() => {
   // 从storage获取登录信息，没有则需要登录
   let tokenInfo = uni.getStorageSync('tokenInfo')
@@ -30,33 +31,32 @@ onLaunch(() => {
               iv: infoRes.iv,
             }
 
-            return
-
             // 提交给服务端
-            api.post('/wxa/login', data).then((res: any) => {
-              // 存储获取到的token
-              uni.setStorageSync('tokenInfo', {
-                token: res.token,
-                timestamp: new Date().valueOf(),
-              })
 
-              // wx.hideLoading()
-              // wx.setStorageSync('userId', res.data.userId)
-              // if (res.data.phone == '') {
-              //   wx.navigateTo({
-              //     url: '/pages/user/bind/bind?userId=' + res.data.userId,
-              //   })
-              // } else {
-              //   http.post('user/getUserInfo', {}, 'json').then((res1) => {
-              //     if (res1.code == 0) {
-              //       wx.setStorageSync('userInfo', res1.data)
-              //       wx.switchTab({
-              //         url: '/pages/index/index',
-              //       })
-              //     }
-              //   })
-              // }
-            })
+            // api.post('wxa/login', data).then((res: any) => {
+            //   // 存储获取到的token
+            //   uni.setStorageSync('tokenInfo', {
+            //     token: res.token,
+            //     timestamp: new Date().valueOf(),
+            //   })
+
+            //   // wx.hideLoading()
+            //   // wx.setStorageSync('userId', res.data.userId)
+            //   // if (res.data.phone == '') {
+            //   //   wx.navigateTo({
+            //   //     url: '/pages/user/bind/bind?userId=' + res.data.userId,
+            //   //   })
+            //   // } else {
+            //   //   http.post('user/getUserInfo', {}, 'json').then((res1) => {
+            //   //     if (res1.code == 0) {
+            //   //       wx.setStorageSync('userInfo', res1.data)
+            //   //       wx.switchTab({
+            //   //         url: '/pages/index/index',
+            //   //       })
+            //   //     }
+            //   //   })
+            //   // }
+            // })
           },
         })
       },
