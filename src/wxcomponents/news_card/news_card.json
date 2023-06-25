@@ -1,0 +1,6 @@
+{
+  "component": true,
+  "usingComponents": {
+    "wd-tag": "../wd-tag/wd-tag"
+  }
+}

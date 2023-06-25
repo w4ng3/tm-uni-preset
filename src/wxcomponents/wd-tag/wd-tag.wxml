@@ -1,0 +1,3 @@
+<view wx:if="{{show}}" class="tag" style="background: {{gradient}};">
+  <text class="label">{{label}}</text>
+</view>

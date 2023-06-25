@@ -16,6 +16,9 @@
       :list="listvedio">
     </tm-carousel>
 
+    <wd-tag label="自定义微信组件"></wd-tag>
+    <news-card imageUrl="../../static/logo.png" title="睡前消息暑期版" date="2023-6-25" :tags="tagList" />
+
     <tm-sheet>
       <tm-divider></tm-divider>
       <tm-tabs
@@ -60,6 +63,8 @@ const tabsTitle = ref([
 function tabschange(key: string | number) {
   console.log(key)
 }
+
+const tagList = ['社会化抚养', '地方债']
 </script>
 
 <style lang="scss" scoped></style>

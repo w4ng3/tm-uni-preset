@@ -36,7 +36,11 @@
       "path": "pages/index/index",
       "style": {
         "navigationBarTitleText": "首页",
-        "transparentTitle": "always"
+        "transparentTitle": "always",
+        "usingComponents": {
+          "wd-tag": "/wxcomponents/wd-tag/wd-tag",
+          "news-card": "/wxcomponents/news_card/news_card"
+        }
       }
     },
     {
