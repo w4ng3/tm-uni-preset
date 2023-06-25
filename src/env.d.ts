@@ -5,4 +5,6 @@ declare module '*.vue' {
   const component: DefineComponent<{}, {}, any>
   export default component
 }
-declare module '*/requset.js'
+
+declare module '@/utils/request/*.js'
+declare module '@/utils/uploadUtil/*.js'

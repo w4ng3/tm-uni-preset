@@ -2,7 +2,7 @@
 
 <script lang="ts" setup>
 import { onLaunch, onShow, onHide } from '@dcloudio/uni-app'
-import api from './utils/api/requset.js'
+import { axios } from '@/utils/request/index.js'
 
 onLaunch(() => {
   // 从storage获取登录信息，没有则需要登录
@@ -32,7 +32,7 @@ onLaunch(() => {
             }
 
             // 提交给服务端
-
+            axios.get('wxa/login', data)
             // api.post('wxa/login', data).then((res: any) => {
             //   // 存储获取到的token
             //   uni.setStorageSync('tokenInfo', {

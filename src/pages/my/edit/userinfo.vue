@@ -22,7 +22,6 @@
 import { reactive, ref } from 'vue'
 import { storeToRefs } from 'pinia'
 import { useUserStore } from '@/store/user-store'
-//@ts-ignore
 import { ossUpload } from '@/utils/uploadUtil/uploadOSS.js'
 
 const userStore = useUserStore()

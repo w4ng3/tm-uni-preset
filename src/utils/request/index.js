@@ -51,7 +51,7 @@ const errorMsg = (response) => {
   return error
 }
 
-function request(path, method, data, setting) {
+const request = function (path, method, data, setting) {
   const tokenInfo = uni.getStorageSync('tokenInfo')
   const host = setting ? setting.host || baseUrl : baseUrl
   const token = setting ? setting.token || tokenInfo.token : tokenInfo.token
@@ -89,7 +89,7 @@ function request(path, method, data, setting) {
   })
 }
 
-export default {
+export const axios = {
   get: (path, data, otherData) => {
     return request(path, 'get', data, otherData)
   },
