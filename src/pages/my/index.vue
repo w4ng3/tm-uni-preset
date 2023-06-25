@@ -15,10 +15,10 @@
       <tm-cell bottomBorder :margin="[0, 0]" :titleFontSize="30" title="关于我们" />
       <tm-cell :margin="[0, 0]" :titleFontSize="30" title="设置 Setting">
         <template v-slot:title>
-          <tm-row>
+          <view class="flex flex-center">
             <tm-icon name="tmicon-cog-fill"></tm-icon>
             <tm-text label="设置" class="pl-18" :font-size="30" />
-          </tm-row>
+          </view>
         </template>
       </tm-cell>
     </view>

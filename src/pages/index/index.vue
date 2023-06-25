@@ -46,13 +46,13 @@ import { ref, Ref } from 'vue'
 import { onShow, onLoad } from '@dcloudio/uni-app'
 
 const listvedio: Ref<any[]> = ref([
-  { test: 'https://picsum.photos/seed/650/600/300' },
-  {
-    test: 'https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4',
-    img: 'https://picsum.photos/200/300?id=43335',
-    type: 'video',
-  },
-  'https://picsum.photos/seed/666/600/300',
+  { test: 'https://riddler.oss-cn-shanghai.aliyuncs.com/img/asdfg.PNG' },
+  // {
+  //   test: 'https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4',
+  //   img: 'https://picsum.photos/200/300?id=43335',
+  //   type: 'video',
+  // },
+  'https://riddler.oss-cn-shanghai.aliyuncs.com/img/riddler.png',
 ])
 
 const tabsTitle = ref([

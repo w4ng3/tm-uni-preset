@@ -27,6 +27,7 @@ npm run dev:mp-weixin
 - CSS 库 使用 TMUI 内置的原子样式 [Link](https://tmui.design/CSSTool/css.html)，在 VSCode 里要安装 `uniapp小程序扩展` 插件，配置样式文件位置，才能有全局样式的类名提示。
 
 - [JS 工具库](https://tmui.design/JSTool/javascript.html#)
+- [Vant-weapp] `wxcomponents`文件夹下加入了 vant-weapp 组件，[说明文档](https://vant-contrib.gitee.io/vant-weapp/#/button)
 
 ## 目录结构
 
