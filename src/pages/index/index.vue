@@ -16,7 +16,9 @@
       :list="listvedio">
     </tm-carousel>
 
-    <wd-tag label="自定义微信组件"></wd-tag>
+    <wd-tag label="使用微信原生组件"></wd-tag>
+    <van-notice-bar left-icon="volume-o" text="在代码阅读过程中人们说脏话的频率是衡量代码质量的唯一标准。" />
+
     <news-card imageUrl="../../static/logo.png" title="睡前消息暑期版" date="2023-6-25" :tags="tagList" />
 
     <tm-sheet>

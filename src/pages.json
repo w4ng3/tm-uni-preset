@@ -39,7 +39,8 @@
         "transparentTitle": "always",
         "usingComponents": {
           "wd-tag": "/wxcomponents/wd-tag/wd-tag",
-          "news-card": "/wxcomponents/news_card/news_card"
+          "news-card": "/wxcomponents/news_card/news_card",
+          "van-notice-bar": "/wxcomponents/vant/weapp/notice-bar/index"
         }
       }
     },
