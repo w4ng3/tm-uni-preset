@@ -23,3 +23,7 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# 忽略声明文件
+src/types/auto-import.d.ts
+src/types/components.d.ts

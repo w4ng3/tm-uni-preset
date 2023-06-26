@@ -19,11 +19,6 @@
 </template>
 
 <script lang="ts" setup>
-import { reactive, ref } from 'vue'
-import { storeToRefs } from 'pinia'
-import { useUserStore } from '@/store/user-store'
-import { ossUpload } from '@/utils/uploadUtil/uploadOSS.js'
-
 const userStore = useUserStore()
 const { userinfo } = storeToRefs(userStore)
 function onChooseAvatar(e: any) {

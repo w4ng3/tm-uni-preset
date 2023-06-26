@@ -39,13 +39,6 @@
   </tm-app>
 </template>
 
-<script lang="ts">
-import { ref } from 'vue'
-import { onLoad, onShow } from '@dcloudio/uni-app'
-import usePull2Refresh from '@/hooks/usePull2Refresh'
-import { useUserStore } from '@/store/user-store'
-import { storeToRefs } from 'pinia'
-</script>
 <script lang="ts" setup>
 const userStore = useUserStore()
 const { userinfo } = storeToRefs(userStore)

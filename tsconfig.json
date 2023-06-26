@@ -4,6 +4,7 @@
     "useDefineForClassFields": true,
     "module": "esnext",
     "moduleResolution": "node",
+    "skipLibCheck": true, // 跳过声明文件的类型检查
     "strict": true,
     "jsx": "preserve",
     "sourceMap": true,

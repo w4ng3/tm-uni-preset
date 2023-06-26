@@ -19,6 +19,7 @@ npm run dev:mp-weixin
 
 - 使用 VSCode 开发时，安装 `uni-create-view`插件，方便创建页面
 - 使用 prettier 格式化代码
+- `export default`,编译成小程序可能出错，若出现错误，可以用 import \* as [改名]试试。
 
 ## Tips
 

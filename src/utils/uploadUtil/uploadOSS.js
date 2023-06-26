@@ -4,7 +4,11 @@ import { Crypto } from './crypto.js'
 import randomWord from './randomWord.js'
 import './hmac.js'
 import './sha1.js'
-
+/**
+ *
+ * @param {*} params filePath: 文件路径, dir: 上传到oss文件夹名称
+ * @returns 文件url
+ */
 const uploadFile = function (params) {
   // console.log('params:', params)
   if (!params.filePath || params.filePath.length < 9) {

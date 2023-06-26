@@ -89,7 +89,7 @@ const request = function (path, method, data, setting) {
   })
 }
 
-export const axios = {
+export const $http = {
   get: (path, data, otherData) => {
     return request(path, 'get', data, otherData)
   },

@@ -42,9 +42,6 @@
 </template>
 
 <script lang="ts" setup>
-import { ref, Ref } from 'vue'
-import { onShow, onLoad } from '@dcloudio/uni-app'
-
 const listvedio: Ref<any[]> = ref([
   { test: 'https://riddler.oss-cn-shanghai.aliyuncs.com/img/asdfg.PNG' },
   // {

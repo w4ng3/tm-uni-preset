@@ -25,11 +25,6 @@
   </tm-app>
 </template>
 
-<script lang="ts">
-import { storeToRefs } from 'pinia'
-import { useUserStore } from '@/store/user-store'
-import { ref } from 'vue'
-</script>
 <script lang="ts" setup>
 const userStore = useUserStore()
 const { userinfo } = storeToRefs(userStore)
