@@ -3,7 +3,7 @@ import uni from '@dcloudio/vite-plugin-uni'
 import vueJsx from '@vitejs/plugin-vue-jsx'
 import { resolve } from 'path'
 import AutoImport from 'unplugin-auto-import/vite' // 自动导入Api
-// import Components from 'unplugin-vue-components/vite' // 自动按需导入组件
+// import Components from 'unplugin-vue-components/vite'
 // https://vitejs.dev/config/
 export default defineConfig({
   resolve: {

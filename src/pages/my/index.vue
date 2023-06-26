@@ -6,7 +6,6 @@
         <tm-text :label="userinfo.nickname" :font-size="40"></tm-text>
       </view>
     </tm-sheet>
-
     <view class="mb-32 mx-32 round-3 overflow mt-20">
       <tm-cell bottomBorder :margin="[0, 0]" :titleFontSize="30" title="基本信息" url="./edit/userinfo" />
       <tm-cell bottomBorder :margin="[0, 0]" :titleFontSize="30" title="版本更新" />
