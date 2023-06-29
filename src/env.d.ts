@@ -8,3 +8,4 @@ declare module '*.vue' {
 
 declare module '@/utils/request/*.js'
 declare module '@/utils/uploadUtil/*.js'
+declare module '@/TUIKit/debug/*.js'

@@ -24,6 +24,12 @@
         "text": "资讯"
       },
       {
+        "pagePath": "TUIKit/TUIPages/TUIConversation/index",
+        "iconPath": "static/tabbar/photo.png",
+        "selectedIconPath": "static/tabbar/photo_active.png",
+        "text": "消息"
+      },
+      {
         "pagePath": "pages/my/index",
         "iconPath": "static/tabbar/user.png",
         "selectedIconPath": "static/tabbar/user_active.png",
@@ -65,6 +71,51 @@
       "style": {
         "navigationBarTitleText": "用户信息"
       }
+    },
+    {
+      "path": "TUIKit/TUIPages/TUIConversation/index",
+      "style": {
+        "navigationBarTitleText": "云通信 IM"
+      }
+    },
+    {
+      "path": "TUIKit/TUIPages/TUIConversation/create",
+      "style": {
+        "navigationBarTitleText": "选择联系人",
+        "app-plus": {
+          "scrollIndicator": "none"
+        }
+      }
+    },
+    {
+      "path": "TUIKit/TUIPages/TUIChat/index",
+      "style": {
+        "navigationBarTitleText": "云通信 IM",
+        "app-plus": {
+          "scrollIndicator": "none",
+          "softinputNavBar": "none",
+          "bounce": "none"
+        }
+      }
+    },
+    {
+      "path": "TUIKit/TUIPages/TUIChat/components/message-elements/video-play",
+      "style": {
+        "navigationBarTitleText": "云通信 IM",
+        "app-plus": {}
+      }
+    },
+    {
+      "path": "TUIKit/TUIPages/TUIGroup/index",
+      "style": {
+        "navigationBarTitleText": "群管理",
+        "app-plus": {
+          "scrollIndicator": "none"
+        }
+      }
+    },
+    {
+      "path": "TUIKit/TUIPages/TUIGroup/memberOperate"
     }
   ],
   "globalStyle": {
