@@ -1,11 +1,15 @@
 <template>
   <tm-app>
     <tm-sheet>
-      <tm-text :font-size="24" _class="font-weight-b" label="..."></tm-text>
+      <tm-text
+        :font-size="24"
+        _class="font-weight-b"
+        label="..."></tm-text>
     </tm-sheet>
     <tm-carousel
-      rangKey="test"
+      rangKey="url"
       autoplay
+      :interval="10000"
       :margin="[0, 16]"
       dotPosition="right"
       vertical
@@ -13,18 +17,24 @@
       :round="3"
       :width="686"
       :height="300"
-      :list="listvedio">
+      :list="list">
     </tm-carousel>
 
     <wd-tag label="使用微信原生组件"></wd-tag>
-    <van-notice-bar left-icon="volume-o" text="在代码阅读过程中人们说脏话的频率是衡量代码质量的唯一标准。" />
+    <van-notice-bar
+      left-icon="volume-o"
+      text="在代码阅读过程中人们说脏话的频率是衡量代码质量的唯一标准。" />
 
-    <news-card imageUrl="../../static/logo.png" title="睡前消息暑期版" date="2023-6-25" :tags="tagList" />
+    <news-card
+      imageUrl="../../static/logo.png"
+      title="睡前消息暑期版"
+      date="2023-6-25"
+      :tags="tagList" />
 
     <tm-sheet>
       <tm-divider></tm-divider>
       <tm-tabs
-        @change="tabschange"
+        @change="tabsChange"
         align="center"
         :width="636"
         :height="300"
@@ -33,7 +43,11 @@
         activeColor="primary"
         :swiper="true"
         activeFontColor="primary">
-        <tm-tabs-pane v-for="(item, index) in tabsTitle" :key="index" :name="item.key" :title="item.title">
+        <tm-tabs-pane
+          v-for="(item, index) in tabsTitle"
+          :key="index"
+          :name="item.key"
+          :title="item.title">
           <view>{{ item.key }} . {{ item.icon }}</view>
         </tm-tabs-pane>
       </tm-tabs>
@@ -42,14 +56,14 @@
 </template>
 
 <script lang="ts" setup>
-const listvedio: Ref<any[]> = ref([
-  { test: 'https://riddler.oss-cn-shanghai.aliyuncs.com/img/asdfg.PNG' },
+const list: Ref<any[]> = ref([
+  { url: 'https://riddler.oss-cn-shanghai.aliyuncs.com/GoTham/GoTham2.png' },
+  'https://riddler.oss-cn-shanghai.aliyuncs.com/GoTham/GoTham1.png',
   // {
-  //   test: 'https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4',
+  //   url: 'https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4',
   //   img: 'https://picsum.photos/200/300?id=43335',
   //   type: 'video',
   // },
-  'https://riddler.oss-cn-shanghai.aliyuncs.com/img/riddler.png',
 ])
 
 const tabsTitle = ref([
@@ -59,11 +73,10 @@ const tabsTitle = ref([
   { key: '4', title: '选项4', dot: false, count: '3', icon: 'tmicon-ios-partly-sunny' },
 ])
 
-function tabschange(key: string | number) {
+function tabsChange(key: string | number) {
   console.log(key)
 }
 
 const tagList = ['社会化抚养', '地方债']
 </script>
-
 <style lang="scss" scoped></style>

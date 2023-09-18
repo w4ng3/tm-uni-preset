@@ -1,21 +1,11 @@
 <!-- component/news_card/news_card.wxml -->
 <view class="container">
-  <image
-    class="image"
-    mode="aspectFill"
-    src="{{imageUrl?imageUrl:defaultCover}}"
-  ></image>
+  <image class="image" mode="aspectFill" src="{{imageUrl?imageUrl:defaultCover}}"></image>
   <view class="right">
     <view class="title">{{title}}</view>
-    <view
-      class="bottom"
-      style="{{tags.length>0? 'justify-content: space-between;':'justify-content: flex-end;'}}"
-    >
+    <view class="bottom" style="{{tags.length>0? 'justify-content: space-between;':'justify-content: flex-end;'}}">
       <view class="tags">
-        <block
-          wx:for="{{tags}}"
-          wx:key="index"
-        >
+        <block wx:for="{{tags}}" wx:key="index">
           <block wx:if="{{index < 2}}">
             <wd-tag label="{{item}}" />
           </block>

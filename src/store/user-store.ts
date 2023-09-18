@@ -7,9 +7,8 @@ export const useUserStore = defineStore(
   () => {
     // state
     const userinfo = reactive({
-      nickname: '',
-      avatar:
-        'https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/9238d007378e43c0a50392f350e57e17~tplv-k3u1fbpfcp-zoom-crop-mark:1512:1512:1512:851.awebp?',
+      nickname: '王东',
+      avatar: 'https://riddler.oss-cn-shanghai.aliyuncs.com/TuWan/koubi.png',
       age: 0,
     })
     // getter

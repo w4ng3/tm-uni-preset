@@ -5,6 +5,18 @@
     }
   ],
   "settings": {
+    // 这些文件将不会显示在工作空间中
+    "files.exclude": {
+      "**/.git": true,
+      "**/.svn": true,
+      "**/.hg": true,
+      "**/CVS": true,
+      "**/.DS_Store": true,
+      "**/*.js": {
+        "when": "$(basename).ts" //ts编译后生成的js文件将不会显示在工作空中
+      },
+      "**/node_modules": true
+    },
     "files.associations": {
       "*.nvue": "vue"
     },
@@ -26,6 +38,22 @@
           "body": "open-data(type=\"${1|groupName,userNickName,userAvatarUrl,userGender,userCity,userProvince,userCountry,userLanguage|}\" lang=\"${2|en,zh_CN,zh_TW|}\")$0"
         }
       }
-    }
+    },
+    "minapp-vscode.cssExtname": "scss",
+    "minapp-vscode.wxmlExtname": "wxml",
+    "minapp-vscode.disableAutoConfig": true,
+    "minapp-vscode.decorateComplexInterpolation": false
+    // "minapp-vscode.globalStyleFiles": ["app.wxss", "style/base.wxss"],
+    // "minapp-vscode.wxmlFormatter": "wxml", // 指定格式化工具
+    // "minapp-vscode.wxmlFormatter": "prettier", // 指定格式化工具,
+    // "minapp-vscode.prettier": {
+    //   // prettier 更多参考 https://prettier.io/docs/en/options.html
+    //   "useTabs": false,
+    //   "tabWidth": 2,
+    //   "printWidth": 130,
+    //   "singleQuote": true,
+    //   "bracketSameLine": true,
+    //   "bracketSpacing": true
+    // }
   }
 }

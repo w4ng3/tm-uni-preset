@@ -35,7 +35,7 @@ module.exports = {
   // 换行符使用 lf
   endOfLine: 'lf',
   // 每行强制使用单个属性
-  singleAttributePerLine: false,
+  singleAttributePerLine: true,
   // 在对象，数组括号与文字之间加空格 "{ foo: bar }"
   bracketSpacing: true,
   // 尾标签 > 是否另起一行

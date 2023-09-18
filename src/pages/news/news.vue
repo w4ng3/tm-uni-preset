@@ -1,16 +1,22 @@
-<template>
+<template lang="html">
   <tm-app>
     <tm-sheet>
-      <tm-text :font-size="24" _class="font-weight-b" label="卡片可通过插槽自定义" />
+      <tm-text
+        :font-size="24"
+        _class="font-weight-b"
+        label="卡片可通过插槽自定义" />
     </tm-sheet>
     <tm-card
       :border="1"
       statusColor="red"
       status="2022-5-2"
       title="看到边线卡片标题了吗？"
-      content="这是一个基础列表示例，下拉刷新，上拉加载。"></tm-card>
+      content="这是一个基础列表示例，下拉刷新，上拉加载。">
+    </tm-card>
 
-    <block v-for="(item, index) in listRef" :key="index">
+    <block
+      v-for="(item, index) in listRef"
+      :key="index">
       <tm-card
         status="2022-5-2"
         :title="item.name"
@@ -24,14 +30,16 @@
               label="确认"
               :font-size="24"
               :width="120"
-              :height="64"></tm-button>
+              :height="64">
+            </tm-button>
             <tm-button
               :round="24"
               color="white"
               label="取消"
               :font-size="24"
               :width="120"
-              :height="64"></tm-button>
+              :height="64">
+            </tm-button>
           </view>
         </template>
       </tm-card>

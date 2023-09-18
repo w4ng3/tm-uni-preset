@@ -1,4 +1,4 @@
-# uniapp-TMUI my custom CLI
+# uniapp-TMUI Preset
 
 使用 tmUI 的 cli 搭建的 uniapp 工程，主要用于微信开发小程序
 
@@ -17,6 +17,8 @@ npm run dev:mp-weixin
 
 ## 建议
 
+- 打开文件夹，直接点`uniapp.code-workspace`文件来打开 vscode，使用设置好的工作区
+- VScode 左下角设置按钮->配置文件->导入配置文件(将 profile 文件夹下的文件导入)，这样就有配置好的工作区环境，在配置文件里切换就可以直接使用了
 - 使用 VSCode 开发时，安装 `uni-create-view`插件，方便创建页面
 - 使用 prettier 格式化代码
 - `export default`,编译成小程序可能出错，若出现错误，可以用 import \* as [改名]试试。
