@@ -42,7 +42,8 @@
     "minapp-vscode.cssExtname": "scss",
     "minapp-vscode.wxmlExtname": "wxml",
     "minapp-vscode.disableAutoConfig": true,
-    "minapp-vscode.decorateComplexInterpolation": false
+    "minapp-vscode.decorateComplexInterpolation": false,
+    "cSpell.words": ["amap", "minapp", "tmui", "uniapp", "unknow", "vant", "weapp", "wxcomponents"]
     // "minapp-vscode.globalStyleFiles": ["app.wxss", "style/base.wxss"],
     // "minapp-vscode.wxmlFormatter": "wxml", // 指定格式化工具
     // "minapp-vscode.wxmlFormatter": "prettier", // 指定格式化工具,

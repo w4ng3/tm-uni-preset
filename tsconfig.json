@@ -14,7 +14,8 @@
     "types": ["@dcloudio/types"],
     "paths": {
       "@/*": ["./src/*"]
-    }
+    },
+    "noImplicitAny": false // 防止对象隐式具有 any 类型
   },
   "include": [
     "./src/*.vue",

@@ -1,4 +1,4 @@
-<template lang="html">
+<template>
   <tm-app>
     <tm-sheet>
       <tm-text

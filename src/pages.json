@@ -36,7 +36,6 @@
       "path": "pages/index/index",
       "style": {
         "navigationBarTitleText": "首页",
-        "transparentTitle": "always",
         "usingComponents": {
           "wd-tag": "/wxcomponents/wd-tag/wd-tag",
           "news-card": "/wxcomponents/news_card/news_card",
@@ -55,15 +54,25 @@
       "path": "pages/my/index",
       "style": {
         "navigationBarTitleText": "我的",
-        "navigationStyle": "custom",
-        "titlePenetrate": "YES",
-        "transparentTitle": "always"
+        "navigationStyle": "custom"
       }
     },
     {
       "path": "pages/my/edit/userinfo",
       "style": {
         "navigationBarTitleText": "用户信息"
+      }
+    },
+    {
+      "path": "pages/index/amap/amap",
+      "style": {
+        "navigationBarTitleText": "amap"
+      }
+    },
+    {
+      "path": "pages/index/amap/location",
+      "style": {
+        "navigationBarTitleText": "位置"
       }
     }
   ],

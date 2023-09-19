@@ -1,11 +1,12 @@
 <template>
   <tm-app>
-    <tm-sheet>
-      <tm-text
-        :font-size="24"
-        _class="font-weight-b"
-        label="..."></tm-text>
-    </tm-sheet>
+    <tm-cell
+      bottomBorder
+      :margin="[10, 5]"
+      :titleFontSize="30"
+      title="考勤打卡"
+      url="./amap/amap" />
+
     <tm-carousel
       rangKey="url"
       autoplay
@@ -33,6 +34,7 @@
 
     <tm-sheet>
       <tm-divider></tm-divider>
+
       <tm-tabs
         @change="tabsChange"
         align="center"
